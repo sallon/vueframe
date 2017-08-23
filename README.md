@@ -23,6 +23,6 @@ npm run build --report
 
 #weuijs
 这是微信的样式组件库，第二版计划会更新成vue组件。
-<img src='https://cloud.githubusercontent.com/assets/2395166/20742697/96705822-b70c-11e6-9486-c03a5939a1d6.png'>
-<a href='https://weui.io/weui.js/'>https://weui.io/weui.js/</a>
+![](https://cloud.githubusercontent.com/assets/2395166/20742697/96705822-b70c-11e6-9486-c03a5939a1d6.png)
+https://weui.io/weui.js/
 ```
