@@ -88,7 +88,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       {
         from: path.resolve(__dirname, '../static'),
         to: config.build.assetsSubDirectory,
-        ignore: ['.*']
+        ignore: ['.*','*.scss']//增加了一个忽略.scss文件
       }
     ])
   ]
