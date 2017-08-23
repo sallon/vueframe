@@ -1,0 +1,34 @@
+@import 'global.scss';
+html,
+body {
+    background: $color-background;
+}
+
+body {
+    font-size: $font-size-default !important;
+    color: $font-color;
+}
+
+//底部导航
+#nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    >.item {
+        @extend .text-center;
+        border: 1px solid $color-border;
+        border-bottom: none;
+        border-right: none;
+        &:first-child {
+            border-left: none;
+        }
+        a {
+            display: block;
+            padding: $px15 0;
+            &.router-link-active {
+                color: $color-orange;
+            }
+        }
+    }
+}

@@ -1,18 +1,19 @@
 <template>
-  <transition name="fade">
-    <router-view></router-view>
-  </transition>
+	<transition appear name="fade">
+		<router-view>
+		</router-view>
+	</transition>
 </template>
 <script>
-  export default {
-    name: 'app'
-  }
+	export default {
+		name: 'app'
+	}
 </script>
 <style lang="scss">
-  @import "../static/demo";
-  /*全局css放置的地方*/
-  html,body{
-    margin: 0px;
-    padding: 0px;
-  }
+	/*全局css放置的地方*/
+	/*重置*/
+	@import "../static/_mixin-reset.scss";
+	/*css类库*/
+	@import "../static/_mixin-css3.scss";
+	@import "../static/app";
 </style>

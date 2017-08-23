@@ -21,7 +21,7 @@ var vm = new Vue({
 	router,
   components: { App }
 });
-//路由钩子
+//全局路由钩子
 router.afterEach((to, form, next) => {
 	document.title = to.name;
 });
