@@ -17,4 +17,10 @@ npm run build
 # build for production and view the bundle analyzer report 打成生产包，并且生成项目报告（整个项目概况）
 npm run build --report
 ```
+## 所用集成的工具类
+``` bash
+#zepto (移动端类库，过渡期使用，后面争取在第二版本淘汰掉)
 
+#weuijs
+这是微信的样式组件库，第二版计划会更新成vue组件。
+```
