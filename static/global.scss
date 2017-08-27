@@ -24,8 +24,12 @@ $color-placeholder:#b2b2b2; //input placeholder 颜色
 $color-border:#dcdcdc; //边线颜色
 $color-border-light:#e7e7e7; //边线颜色 淡
 //重置
+@include reset;
 * {
+    -webkit-user-select: none;
     -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     outline: none;
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
@@ -35,6 +39,38 @@ $color-border-light:#e7e7e7; //边线颜色 淡
 html,
 body {
     overflow-x: hidden;
+}
+
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select,
+textarea {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.button,
+button,
+input[type=reset],
+input[type=submit],
+input[type=button] {
+    color: inherit;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 b,
@@ -141,15 +177,27 @@ summary {
 }
 
 //公共
-.header {
-    &+.container {
-        padding-top: 1rem;
+.TopHeader {
+    @include boxShadow(none);
+    background-color: $color-header-background;
+    color: white;
+    * {
+        color: white;
+    }
+    .button,
+    button,
+    input[type=button],
+    input[type=submit],
+    input[type=reset] {
+        background: transparent;
+        border: none;
     }
 }
 
 .container {
-    padding-left: $px15;
-    padding-right: $px15;
+    padding-top: 1rem;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .text-center {

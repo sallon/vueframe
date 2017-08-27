@@ -5,17 +5,13 @@
 </template>
 
 <script>
-	var _export = {
+	let _export = {
 		name: 'index-nav3',
 		data() {
-			return {
-				title: '导航3'
-			}
+			return {}
 		},
-		methods: {
-		},
-		components: {
-		}
+		methods: {},
+		components: {}
 	};
 	export default _export;
 </script>

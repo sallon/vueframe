@@ -5,17 +5,22 @@
 </template>
 
 <script>
-	var _export = {
+	let _export = {
 		name: 'index-nav1',
 		data() {
+			let vm = this;
+			vm.$nextTick(() => {
+				//父页面header路径 注意层级关系
+				let header = this.$parent.$refs.header;
+				//				header.title = vm.title;
+				//				console.log(header)
+			});
 			return {
-				title: '导航1'
+				title: 'nav1'
 			}
 		},
-		methods: {
-		},
-		components: {
-		}
+		methods: {},
+		components: {}
 	};
 	export default _export;
 </script>

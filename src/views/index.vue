@@ -1,6 +1,15 @@
 <template>
 	<div id="app">
-		<TopHeader v-if="openHead" :title='title'></TopHeader>
+		<TopHeader :show="openHead" :title='title' ref='header'>
+			<router-link :to="backurl" slot="left">
+				<button>
+					&lang;
+				</button>
+			</router-link>
+			<div slot="right" @click="click_plus">
+				&oplus;
+			</div>
+		</TopHeader>
 		<div class="container">
 			<router-view>
 			</router-view>
@@ -20,25 +29,30 @@
 </template>
 
 <script>
+	import { weui } from '@/assets/js/weui' //生产版
 	import TopHeader from '../components/TopHeader'; //头部组件
 
-	var _export = {
+	let _export = {
 		name: 'index',
 		data() {
 			return {
 				openHead: true,
-				title: '首页'
+				title: 'index',
+				backurl: '/index/nav3'
 			}
 		},
 		methods: {
-			showConsole: function() {
-				setTimeout(function() {
-					console.log(this.store.state.title);
-				}, 1000)
+			click_plus() {
+				console.log(ENV.debug);
+				weui.confirm('自定义标题的alert', function() {
+					console.log('ok');
+				}, {
+					title: '自定义标题'
+				});
 			}
 		},
 		components: {
-			TopHeader,
+			TopHeader
 		}
 	};
 	export default _export;
